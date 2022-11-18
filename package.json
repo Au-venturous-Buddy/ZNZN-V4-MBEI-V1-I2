@@ -42,8 +42,7 @@
       "mergeASARs": false
     },
     "dmg": {
-      "background": "src/images/Zene N Zeanne Background.png",
-      "backgroundColor": "#017BFF"
+      "background": "src/images/Zene N Zeanne Background.png"
     }
   },
   "private": true,
