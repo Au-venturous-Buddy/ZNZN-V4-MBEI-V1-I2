@@ -1,4 +1,4 @@
-import { BsCaretRightFill } from "react-icons/bs";
+import { PiHandSwipeLeftFill } from "react-icons/pi";
 import React from "react"
 import { Button, OverlayTrigger, Tooltip } from "react-bootstrap"
 import ResponsiveSize from "../hooks/responsive-size";
@@ -13,16 +13,17 @@ export default function NextArrow(props) {
     const { onClick } = props;
     return (
       <OverlayTrigger
-          placement="top"
+          placement="left"
           delay={{ show: 250, hide: 250 }}
           overlay={helpTooltip("Next Page")}
       >
       <Button
         onClick={onClick}
+        className = "carousel-control-next"
         aria-label="Next"
-        style={{fontSize: ResponsiveSize(0.8, "rem", 0.001, 500)}}
+        style={{fontSize: ResponsiveSize(2, "rem", 0.001, 500)}}
       >
-        <span aria-hidden={true}><BsCaretRightFill /></span>
+        <span aria-hidden={true}><PiHandSwipeLeftFill /></span>
       </Button>
       </OverlayTrigger>
     );

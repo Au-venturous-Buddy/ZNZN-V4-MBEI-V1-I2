@@ -1,4 +1,4 @@
-import { BsCaretLeftFill } from "react-icons/bs";
+import { PiHandSwipeRightFill } from "react-icons/pi";
 import React from "react"
 import { Button, OverlayTrigger, Tooltip } from "react-bootstrap"
 import ResponsiveSize from "../hooks/responsive-size";
@@ -13,16 +13,17 @@ export default function PrevArrow(props) {
     const { onClick } = props;
     return (
       <OverlayTrigger
-          placement="top"
+          placement="right"
           delay={{ show: 250, hide: 250 }}
           overlay={helpTooltip("Previous Page")}
       >
       <Button
         onClick={onClick}
+        className = "carousel-control-prev"
         aria-label="Previous"
-        style={{fontSize: ResponsiveSize(0.8, "rem", 0.001, 500)}}
+        style={{fontSize: ResponsiveSize(2, "rem", 0.001, 500)}}
       >
-        <span aria-hidden={true}><BsCaretLeftFill /></span>
+        <span aria-hidden={true}><PiHandSwipeRightFill /></span>
       </Button>
       </OverlayTrigger>
     );

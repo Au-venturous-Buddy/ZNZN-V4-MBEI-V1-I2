@@ -88,8 +88,8 @@ article a:hover {
 body {
   font-family: "Futura", "Segoe UI", Arial, Helvetica, sans-serif;
   color: #fff;
-  background-image: url("../images/Zene\ N\ Zeanne\ Background.png");
-  background-size: cover;
+  background-image: url("../images/WoodFloorBackground.png");
+  background-size: 20%;
 }
 
 main, .modal {
@@ -319,9 +319,11 @@ ul.bullet-points li {
 
 .comic-strip-main,
 .img-button.comic-strip-page-thumbnail {
+  font-family: "Chalkduster", "Futura", "Segoe UI", Arial, Helvetica, sans-serif;
+  color: #00f;
   border-left: 20px dotted gray;
-  background-color: white;
-  background-image: url("../images/WhitePaperBackground.png");
+  background-color: rgb(255, 234, 183);
+  background-image: url("../images/Au-Some\ Blogs\ Background.png");
   background-size: 90%;
   background-position: center;
 }
@@ -343,7 +345,7 @@ ul.bullet-points li {
 
   .comic-strip-page-number {
     text-align: center;
-    color: $primaryColor;
+    color: #00f;
   }
 }
 
@@ -360,9 +362,9 @@ ul.bullet-points li {
 .img-button.comic-strip-page-thumbnail-current .comic-strip-page-number,
 .btn.read-now-btn:hover,
 .btn.read-now-btn:focus {
-  background: rgba(255, 255, 0, 0.5);
-  border-left: 5px solid #CDCD00;
-  border-right: 5px solid #CDCD00;
+  background: rgba(0, 205, 0, 0.5);
+  border-left: 5px solid rgba(0, 139, 0, 0.7);
+  border-right: 5px solid rgba(0, 139, 0, 0.7);
 }
 
 .btn.read-now-btn:hover,

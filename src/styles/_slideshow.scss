@@ -1,6 +1,8 @@
 .carousel-control-prev,
-.carousel-control-next {
-  background-color: $primaryColor;
+.carousel-control-next,
+.page-navigator-button {
+  background-color: rgba(0, 0, 0, 0);
+  color: #00f;
   width: 10%;
   opacity: 1;
   margin-top: 5%;
@@ -30,13 +32,11 @@
 }
 
 .carousel-control-prev:hover, 
-.carousel-control-next:hover {
-    box-shadow: $shadow;
-    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(135, 135, 135, 0.3)), $primaryColor;
-}
-
-.carousel-control-prev:hover {
-    box-shadow: $shadowReverse;
+.carousel-control-next:hover,
+.page-navigator-button:hover {
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0);
+  color: #00f;
 }
 
 .carousel-fade {
