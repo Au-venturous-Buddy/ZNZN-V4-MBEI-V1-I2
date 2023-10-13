@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import ComicStripPage from '../components/comic-strip-page'
 import ComicStripBase from "../components/comic-strip-base"
+import allModes from "../assets/modes.json";
 
 function generatePages(scenes, dialogues, dialoguesAlt, callAt) {
   var pages = [];
@@ -41,7 +42,7 @@ function generatePages(scenes, dialogues, dialoguesAlt, callAt) {
   return pages;
 }
 
-function compileComicStrip(data, state) {
+function compileComicStrip(data, state, modes) {
     var metadataItems = null;
     var scenes = {};
     var dialogues = {};
@@ -89,7 +90,7 @@ function compileComicStrip(data, state) {
 
     var modeOptions = []
     var callAt = []
-    metadataItems.childMarkdownRemark.frontmatter.modes_v2.forEach((mode) => {
+    modes.forEach((mode) => {
       modeOptions.push(<option key={mode.mode_name}>{mode.mode_name}</option>)
       if(mode.mode_name === state.currentMode) {
         callAt = mode.scenes;
@@ -111,10 +112,11 @@ export default function ComicStripv2022_2(props) {
   return(
     <ComicStripBase 
       data={props.data}
+      modes={allModes}
       tableBackgroundBase="table-background"
       tableBackgroundOptions={['Zene', 'Zeanne', 'Classroom Table']}
       defaultLanguage="English"
-      defaultMode="Original"
+      defaultMode={allModes[Math.floor(Math.random() * allModes.length)]["mode_name"]}
       compile={compileComicStrip}
     />
   )
@@ -134,10 +136,6 @@ export const query = graphql`
           childMarkdownRemark {
             frontmatter {
               title
-              modes_v2 {
-                mode_name
-                scenes
-              }
               format
               language_code
               dialogue_alt

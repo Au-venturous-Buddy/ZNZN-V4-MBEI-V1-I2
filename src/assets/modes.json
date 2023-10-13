@@ -1,0 +1,6 @@
+[
+    {"mode_name": "Original", "scenes": ["0-Original"]},
+    {"mode_name": "With Face Masks", "scenes": ["0-With Face Masks"]},
+    {"mode_name": "With Double Face Masks", "scenes": ["0-With Double Face Masks"]},
+    {"mode_name": "With Double Face Masks and Face Shields", "scenes": ["0-With Double Face Masks and Face Shields"]}
+]

@@ -8,10 +8,4 @@ issue: 0
 category: "Social Snapshots"
 format: "comic-strip-v2022_2"
 synopsis: "A Template for Zene 'N Zeanne: Social Snapshots Offline Download Format"
-modes_v2: [
-    {mode_name: "Original", scenes: ["0-Original"]},
-    {mode_name: "With Face Masks", scenes: ["0-With Face Masks"]},
-    {mode_name: "With Double Face Masks", scenes: ["0-With Double Face Masks"]},
-    {mode_name: "With Double Face Masks and Face Shields", scenes: ["0-With Double Face Masks and Face Shields"]}
-]
 ---

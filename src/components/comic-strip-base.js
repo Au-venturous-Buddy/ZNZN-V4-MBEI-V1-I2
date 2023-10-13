@@ -176,7 +176,7 @@ export default class ComicStripBase extends React.Component {
     }
   
     render() {
-      var contents = this.props.compile(this.props.data, this.state)
+      var contents = this.props.compile(this.props.data, this.state, this.props.modes)
   
       const settings = {
         dots: false,
