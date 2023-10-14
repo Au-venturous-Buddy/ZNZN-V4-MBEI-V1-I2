@@ -114,7 +114,7 @@ const helpTooltip = (message, props) => (
               <ResponsiveHeader level={2} maxSize={1.5} minScreenSize={500}>Mode</ResponsiveHeader>
             </div>
             <Form.Select style={{color: "#017BFF"}} className="hover-shadow" id="mode-selector" onChange={props.changeMode} value={props.state.currentMode}>
-              {props.modeOptions}
+              {props.modeOptions.map((value) => (<option key={value}>{value}</option>))}
             </Form.Select>
           </section>
           <section className="mb-3">
@@ -146,7 +146,7 @@ export default class ComicStripBase extends React.Component {
     state = {
       currentLanguage: this.props.defaultLanguage,
       currentMode: this.props.defaultMode,
-      currentTableBackground: this.props.tableBackgroundOptions[0],
+      currentTableBackground: this.props.defaultTableBackground,
       currentSize: 65,
       slideIndex: 0,
       updateCount: 0,
@@ -193,8 +193,8 @@ export default class ComicStripBase extends React.Component {
       };
   
       return(
-        <Layout useCustomBackground={this.props.useCustomBackground} menuBarItems={[(<SettingsWindow state={this.state} languageOptions={contents.languageOptions} modeOptions={contents.modeOptions} tableBackgroundOptions={this.props.tableBackgroundOptions} changeLanguage={this.changeLanguage} changeMode={this.changeMode} changeTableBackground={this.changeTableBackground} changePageSize={this.changePageSize} />)]} showMenuBar={true}>
-          <div className={this.props.tableBackgroundBase + "-" + this.state.currentTableBackground.toLowerCase().replace(/ /g, "-")} style={{textAlign: 'center'}}>
+        <Layout useCustomBackground={this.props.useCustomBackground} menuBarItems={[(<SettingsWindow state={this.state} languageOptions={contents.languageOptions} modeOptions={this.props.modeOptions} tableBackgroundOptions={this.props.tableBackgroundOptions} changeLanguage={this.changeLanguage} changeMode={this.changeMode} changeTableBackground={this.changeTableBackground} changePageSize={this.changePageSize} />)]} showMenuBar={true}>
+          <div style={this.props.tableBackgrounds[this.state.currentTableBackground]}>
             <div className={`m-3 p-3 comic-strip-main`} style={{textAlign: 'center', color: "#017BFF"}}>
             <section className="my-3" style={{textAlign: "center"}}>
               <ResponsiveHeader level={1} maxSize={2} minScreenSize={800}>{contents.metadataItems.childMarkdownRemark.frontmatter.title}</ResponsiveHeader>

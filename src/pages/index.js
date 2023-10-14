@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import ComicStripPage from '../components/comic-strip-page'
 import ComicStripBase from "../components/comic-strip-base"
 import allModes from "../assets/modes.json";
+import tableBackgrounds from "../assets/table-backgrounds.json";
 
 function generatePages(scenes, dialogues, dialoguesAlt, callAt) {
   var pages = [];
@@ -43,6 +44,8 @@ function generatePages(scenes, dialogues, dialoguesAlt, callAt) {
 }
 
 function compileComicStrip(data, state, modes) {
+  var callAt = modes[state.currentMode]
+
     var metadataItems = null;
     var scenes = {};
     var dialogues = {};
@@ -88,35 +91,30 @@ function compileComicStrip(data, state, modes) {
       languageOptions.push(<option key={value}>{value}</option>)
     })
 
-    var modeOptions = []
-    var callAt = []
-    modes.forEach((mode) => {
-      modeOptions.push(<option key={mode.mode_name}>{mode.mode_name}</option>)
-      if(mode.mode_name === state.currentMode) {
-        callAt = mode.scenes;
-      }
-    })
-
     var pages = generatePages(scenes, dialogues, dialoguesAlt, callAt);
 
     return {
       metadataItems,
       languageOptions,
-      modeOptions,
       currentLanguageCode,
       pages
     }
 }
 
 export default function ComicStripv2022_2(props) {
+  const modeOptions = Object.keys(allModes);
+  const tableBackgroundOptions = Object.keys(tableBackgrounds);
+
   return(
     <ComicStripBase 
       data={props.data}
+      modeOptions={modeOptions}
+      defaultMode={modeOptions[Math.floor(Math.random() * modeOptions.length)]}
       modes={allModes}
-      tableBackgroundBase="table-background"
-      tableBackgroundOptions={['Zene', 'Zeanne', 'Classroom Table']}
+      tableBackgroundOptions={tableBackgroundOptions}
+      defaultTableBackground={tableBackgroundOptions[Math.floor(Math.random() * tableBackgroundOptions.length)]}
+      tableBackgrounds={tableBackgrounds}
       defaultLanguage="English"
-      defaultMode={allModes[Math.floor(Math.random() * allModes.length)]["mode_name"]}
       compile={compileComicStrip}
     />
   )
