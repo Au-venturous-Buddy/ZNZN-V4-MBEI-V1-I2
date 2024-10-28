@@ -6,8 +6,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Zene 'N Zeanne Social Snapshots Template`,
-    author: `Au-mazin' Creatives`
+    title: `Social Snapshots: Vaccines`,
+    author: `Au-venturous Buddy`
   },
   plugins: [
     {
@@ -26,8 +26,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Zene 'N Zeanne Social Snapshots Template`,
-        short_name: `ZNZN-MBEI-V0-I0`,
+        name: `Social Snapshots: Vaccines`,
+        short_name: `ZNZN-MBEI-V1-I1`,
         start_url: `/`,
         background_color: `#017BFF`,
         theme_color: `#017BFF`,

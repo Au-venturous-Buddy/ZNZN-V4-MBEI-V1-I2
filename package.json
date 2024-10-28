@@ -1,10 +1,10 @@
 {
-  "name": "znzn-mbei-v0-i0",
-  "author": "Au-mazin' Creatives <ezekiel.lagmay@yahoo.com>",
+  "name": "znzn-mbei-v1-i1",
+  "author": "Au-venturous Buddy <auventurous.buddy@gmail.com>",
   "main": "main.js",
   "build": {
     "icon": "src/images/Social Snapshots.png",
-    "productName": "Zene 'N Zeanne Social Snapshots Template",
+    "productName": "Social Snapshots: Vaccines",
     "files": [
       "public/**/*",
       "main.js"
@@ -46,7 +46,7 @@
     }
   },
   "private": true,
-  "description": "A Template for Zene 'N Zeanne: Social Snapshots Offline Download Format",
+  "description": "Zeanne teaches Zene how to remain calm during vaccines.",
   "version": "0.0.0",
   "license": "0BSD",
   "scripts": {

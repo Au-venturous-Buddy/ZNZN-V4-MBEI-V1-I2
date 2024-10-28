@@ -1,6 +1,6 @@
 {
-    "Original": ["0-Original"],
-    "With Face Masks": ["0-With Face Masks"],
-    "With Double Face Masks": ["0-With Double Face Masks"],
-    "With Double Face Masks and Face Shields": ["0-With Double Face Masks and Face Shields"]
+    "Original": ["0", "1-Original"],
+    "With Face Masks": ["0", "1-With Face Masks"],
+    "With Double Face Masks": ["0", "1-With Double Face Masks"],
+    "With Double Face Masks and Face Shields": ["0", "1-With Double Face Masks and Face Shields"]
 }

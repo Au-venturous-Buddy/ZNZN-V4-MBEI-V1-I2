@@ -50,7 +50,7 @@ function compileComicStrip(data, state, modes) {
     var scenes = {};
     var dialogues = {};
     var dialoguesAlt = {};
-    var currentLanguageCode = `en`;
+    var currentLanguageCode = "";
     var languages = new Set();
     for(var i = 0; i < data.allFile.edges.length; i++) {
       var nodeItem = data.allFile.edges[i].node
@@ -109,10 +109,10 @@ export default function ComicStripv2022_2(props) {
     <ComicStripBase 
       data={props.data}
       modeOptions={modeOptions}
-      defaultMode={modeOptions[Math.floor(Math.random() * modeOptions.length)]}
+      defaultMode={modeOptions[0]}
       modes={allModes}
       tableBackgroundOptions={tableBackgroundOptions}
-      defaultTableBackground={tableBackgroundOptions[Math.floor(Math.random() * tableBackgroundOptions.length)]}
+      defaultTableBackground={tableBackgroundOptions[0]}
       tableBackgrounds={tableBackgrounds}
       defaultLanguage="English"
       compile={compileComicStrip}
