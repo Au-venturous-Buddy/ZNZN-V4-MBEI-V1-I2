@@ -1,10 +1,10 @@
 {
-  "name": "znzn-mbei-v1-i1",
+  "name": "znzn-mbei-v1-i2",
   "author": "Au-venturous Buddy <auventurous.buddy@gmail.com>",
   "main": "main.js",
   "build": {
     "icon": "src/images/Social Snapshots.png",
-    "productName": "Social Snapshots: Vaccines",
+    "productName": "Social Snapshots: Preparing for School",
     "files": [
       "public/**/*",
       "main.js"
@@ -46,7 +46,7 @@
     }
   },
   "private": true,
-  "description": "Zeanne teaches Zene how to remain calm during vaccines.",
+  "description": "Zeanne teaches Zene how to get ready for school.",
   "version": "0.0.0",
   "license": "0BSD",
   "scripts": {

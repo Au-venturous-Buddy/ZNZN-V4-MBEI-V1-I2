@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Social Snapshots: Vaccines`,
+    title: `Social Snapshots: Preparing for School`,
     author: `Au-venturous Buddy`
   },
   plugins: [
@@ -26,8 +26,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Social Snapshots: Vaccines`,
-        short_name: `ZNZN-MBEI-V1-I1`,
+        name: `Social Snapshots: Preparing for School`,
+        short_name: `ZNZN-MBEI-V1-I2`,
         start_url: `/`,
         background_color: `#017BFF`,
         theme_color: `#017BFF`,
